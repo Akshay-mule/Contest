@@ -7,21 +7,40 @@ let arr = [
 ];
 
 function PrintDeveloperswithMap() {
-  //Write your code here
+    arr.map(function(element){
+    if(element.profession === "developer")
+    {
+      console.log(element.profession);
+    }
+    
+}
 }
 
 function PrintDeveloperbyForEach() {
-  //Write your code here
+  arr.forEach(function(element){
+    if(element.profession === "developer")
+    {
+      console.log(element.profession);
+    }
+  }
 }
 
 function addData() {
-  //Write your code here
+  const newObj = {id:4,name:"susan",age:"20",profession:"intern"};
+  arr.push(newObj);
+  console.log(arr);
+    
 }
 
 function removeAdmin() {
-  //Write your code here
+  Const newArray = arr.filter((element)=> element.profession !== "admin");
+  console.log(newArray);
 }
 
 function concatenateArray() {
-  //Write your code here
+  const arr1 =[{id:5,name:"Akshay",age:"21",profession:"developer"}, 
+               {id:6,name:"Ajay",age:"25",profession:"intern"}, 
+               {id:7,name:"Arjun",age:"28",profession:"software enginner"}]
+  const newArray = arr.concat(arr1);
+  console.log(newArray);
 }
